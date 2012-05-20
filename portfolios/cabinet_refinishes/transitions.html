@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://css3.bradshawenterprises.com/all/ -->
+<html class=" js cssanimations csstransforms csstransforms3d csstransitions">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Gallery Demo 1</title>
+    <link rel="stylesheet" href="../../default.css" media="screen">		
+    <script src="../../all_files/jquery1.7.1.min.js"></script>
+     
+	<style>
+		
+		#cf2 {
+			position:relative;
+			height:360px;
+			width:505px;
+			margin:0 auto;
+		}
+		#cf2 img {
+			position:absolute;
+			left:0;
+			-webkit-transition: opacity 1s ease-in-out;
+			-moz-transition: opacity 1s ease-in-out;
+			-o-transition: opacity 1s ease-in-out;
+			-ms-transition: opacity 1s ease-in-out;		
+			transition: opacity 1s ease-in-out;
+		}
+		
+		#cf2 img.transparent {
+			opacity:0;
+			-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			filter: alpha(opacity=0);		
+		}
+		#cf_onclick {
+			margin-left:auto;
+			margin-right:auto;
+			display:block;
+			width:33px;
+			cursor:pointer;
+			text-align:center;
+			position:relative;
+			top:-40px;
+		}
+		#state {
+			display:block;
+			margin:0px auto 0px auto;
+			width:130px;
+			position:relative;
+			top:-25px;
+			left:100px;
+			font-family:Verdana, Geneva, sans-serif;
+			font-weight:bold;	
+		}
+	body {
+		margin: 0px;
+	}
+    </style>	
+		
+</head>		
+	<body>		
+
+	
+
+
+<script>
+$(document).ready(function() {
+	var flipped = false;
+	$("#cf_onclick, #cf2 img.top").click(function() {
+		var toggle = document.getElementById("cf_onclick");
+		var state = document.getElementById("state");
+		$("#cf2 img.top").toggleClass("transparent");
+		if (!flipped) {
+			toggle.innerHTML = "<img src='images/gallery_after.png' width='33' height='33'/>";
+			state.innerHTML = "After";
+			flipped = true;	
+		} else {
+			toggle.innerHTML = "<img src='images/gallery_before.png' width='33' height='33'/>";
+			state.innerHTML = "Before";
+			flipped = false;	
+		}
+		
+	});
+});
+</script>
+<div id="cf2">
+	<img class="bottom" src="../../images/sampleAFTER.jpg">
+	<img class="top" src="../../images/sampleBEFORE.jpg">
+    
+</div>
+<div id="state">Before</div>
+<div id="cf_onclick"><img src="../../images/gallery_before.png" width="33" height="33"/></div>
+
+	
+		
+</body></html>

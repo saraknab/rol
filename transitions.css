@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+#cf2 {
+	position:relative;
+	height:365px;
+	width:480px;
+	margin:0 auto;
+}
+#cf2 img {
+	position:absolute;
+	left:0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;		
+	transition: opacity 1s ease-in-out;
+}
+
+#cf2 img.transparent {
+	opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);		
+}
+#cf_onclick {
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	width:33px;
+	cursor:pointer;
+	text-align:center;
+	position:relative;
+	top:-48px;
+}
+#state {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:130px;
+	position:relative;
+	top:-25px;
+	left:100px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;	
+}
+body {
+	margin: 0px;
+}
